@@ -17,7 +17,6 @@ from teryt.utils_zip import (
 class Command(BaseCommand):
     help = 'Import TERYT data from ZIP files prepared by GUS,\
             auto download, unpack and update with them.'
-    option_list = BaseCommand.option_list
 
     def handle(self, *args, **options):
         # download zip files from GUS site

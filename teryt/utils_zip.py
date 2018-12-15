@@ -66,6 +66,8 @@ def update_database(xml_stream, fname, force_flag):
                                   else x['SYM'])
 
             for vals in row_list:
+                if len(vals) == 0:
+                    continue
                 instance = teryt_class()
                 instance.set_val(vals)
                 instance.aktywny = True
