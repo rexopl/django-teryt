@@ -43,7 +43,7 @@ class Command(BaseCommand):
                 with zfile.open(fname) as xml_file:
                     update_database(xml_file, fname, force_ins)
             else:
-                with open(data_file, encoding="utf8") as xml_file:
+                with open(data_file) as xml_file:
                     update_database(xml_file, data_file, force_ins)
             self.stdout.write('File {} uploaded'.format(data_file))
 
